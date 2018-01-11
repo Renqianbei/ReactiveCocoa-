@@ -1,24 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lD7-0c-6dt"/>
+                        <viewControllerLayoutGuide type="bottom" id="YuG-cK-n8q"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="grS-hy-4rC">
+                                <rect key="frame" x="121" y="50" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="ekH-4h-9kN"/>
+                                    <constraint firstAttribute="height" constant="30" id="xtN-cz-kPh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBO-Sj-knM">
+                                <rect key="frame" x="121" y="100" width="133" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MV-cY-x6Z">
+                                <rect key="frame" x="144" y="155" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="Bh9-eB-iVy"/>
+                                    <constraint firstAttribute="height" constant="30" id="KsG-DE-cSo"/>
+                                </constraints>
+                                <state key="normal" title="鞥路"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="eBO-Sj-knM" firstAttribute="centerX" secondItem="grS-hy-4rC" secondAttribute="centerX" id="2CV-FX-7GK"/>
+                            <constraint firstItem="4MV-cY-x6Z" firstAttribute="top" secondItem="eBO-Sj-knM" secondAttribute="bottom" constant="25" id="Jhu-fY-vPX"/>
+                            <constraint firstItem="eBO-Sj-knM" firstAttribute="top" secondItem="grS-hy-4rC" secondAttribute="bottom" constant="20" id="UZY-PV-ChF"/>
+                            <constraint firstItem="eBO-Sj-knM" firstAttribute="height" secondItem="grS-hy-4rC" secondAttribute="height" id="VZR-Ar-0P0"/>
+                            <constraint firstItem="eBO-Sj-knM" firstAttribute="width" secondItem="grS-hy-4rC" secondAttribute="width" id="a5Q-cF-q2U"/>
+                            <constraint firstItem="grS-hy-4rC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="jnW-qO-4gi"/>
+                            <constraint firstItem="4MV-cY-x6Z" firstAttribute="centerX" secondItem="eBO-Sj-knM" secondAttribute="centerX" id="krQ-33-W40"/>
+                            <constraint firstItem="grS-hy-4rC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ppf-gf-jVl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginB" destination="4MV-cY-x6Z" id="xIl-kX-v8v"/>
+                        <outlet property="loginF" destination="grS-hy-4rC" id="cjf-Jl-SEw"/>
+                        <outlet property="pwdF" destination="eBO-Sj-knM" id="TI4-In-nYz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

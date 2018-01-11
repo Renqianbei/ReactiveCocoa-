@@ -1,0 +1,6 @@
+framework module Pods_HelloReactiveCocoa {
+  umbrella header "Pods-HelloReactiveCocoa-umbrella.h"
+
+  export *
+  module * { export * }
+}
